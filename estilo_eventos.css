@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard", "Inter";
+  background: #ffffff;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 12px;
+  height: 46px;
+  box-shadow: 0 16px 12px 0 rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  float: left;
+  height: 90%;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 100%;
+  border-radius: 32px;
+}
+
+.buttons-user button {
+  color: #050505;
+  font-weight: bold;
+  font-family: inherit;
+  background-color: #ffffff;
+  border-color: #bbbbbb;
+  border-style: solid;
+  cursor: pointer;
+  padding: 12px 24px;
+  margin-left: 8px;
+  border-radius: 32px;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.buttons-user button:hover {
+  background-color: #36B3FC;
+  border-color: #36B3FC;
+  color: #ffffff;
+}
+
+.buttons-event {
+  display: flex;
+  height: 90%;
+  margin-right: 12px;
+}
+
+
+.search {
+  display: block;
+  display: left;
+  margin: 0 auto;
+  margin-left: 20px;
+  border-radius: 32px;
+}
+
+.search-input {
+  margin: 0 auto;
+  color: #050505;
+  font-size: medium;
+  font-family: inherit;
+  background-color: #ffffff;
+  border-color: #bbbbbb;
+  border-style: solid;
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 32px;
+  min-width: 200px;
+  width: fit-content;
+}
+
+
+.button-search  {
+  position:absolute;
+  cursor: pointer;
+  margin-left: 20%;
+  top: 24%;
+  display: inline-flex;
+  margin-top: -10%;
+  margin-left: -50px;
+}
+
+.buttons-event button {
+  background-color: #FF8C1E;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  padding: 12px 24px;
+  margin-left: 12px;
+  border-radius: 32px;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.buttons-event button:hover {
+  background-color: #FFD92E;
+  color: #050505;
+}
+
+footer {
+  background-color: #050505;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 800px;
+  margin: 10px auto;
+
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links li:not(:last-child)::after {
+  content: " | ";
+  margin: 0 5px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #FF8C1E;
+}
+
+.footer-container p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+.hamburger-link {
+  display: flex;
+  width: 258px;
+  padding: 4px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  background-color: none;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.hamburger-link:hover {
+  background-color: #e6e6e69a;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.hamburger-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding-right: 3px;
+  padding-left: 0px;
+}
+
+.linha {
+  fill: none;
+  stroke: #050505;
+  stroke-width: 4;
+  transition: stroke-dasharray 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.linha1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 4;
+}
+
+.linha2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 4;
+}
+
+.linha3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 4;
+}
+
+.aberta .linha1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 4;
+}
+
+.aberta .linha2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 4;
+}
+
+.aberta .linha3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 4;
+}
+
+.hamburger-menu {
+  position: fixed;
+  padding: 12px;
+  top: 90px;
+  left: 6px;
+  width: 265px;
+  z-index: 1000;
+  background-color: #ffffff;
+  height: 354px;
+  transform: translateX(-350px);
+  transition: transform 0.2s ease;
+  border-radius: 18px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+
+.hamburger-menu.show {
+  transform: translateX(0);
+}
+
+.hamburger-text {
+  color: #050505;
+  padding: 12px 0px 0px 18px;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: left;
+}
+
+.hamburger-icons {
+  padding: 10px 0px 10px 10px;
+}
